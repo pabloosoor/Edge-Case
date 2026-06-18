@@ -1,0 +1,165 @@
+[gd_scene load_steps=10 format=3]
+
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1"]
+[ext_resource type="Script" path="res://scripts/motivo.gd" id="2"]
+[ext_resource type="FontFile" path="res://fonts/SpaceGrotesk.ttf" id="3"]
+[ext_resource type="FontFile" path="res://fonts/Inter.ttf" id="4"]
+[ext_resource type="FontFile" path="res://fonts/Inter-Italic.ttf" id="5"]
+
+[sub_resource type="FontVariation" id="font_titulo"]
+base_font = ExtResource("3")
+variation_opentype = {
+2003265652: 300
+}
+spacing_glyph = 14
+
+[sub_resource type="StyleBoxFlat" id="estilo_normal"]
+bg_color = Color(0, 0, 0, 0)
+content_margin_left = 28.0
+content_margin_top = 7.0
+content_margin_right = 20.0
+content_margin_bottom = 7.0
+
+[sub_resource type="StyleBoxFlat" id="estilo_resaltado"]
+bg_color = Color(0, 0, 0, 0)
+border_width_left = 4
+border_color = Color(0.7529, 0.502, 0.1216, 1)
+content_margin_left = 28.0
+content_margin_top = 7.0
+content_margin_right = 20.0
+content_margin_bottom = 7.0
+
+[sub_resource type="Theme" id="tema_opciones"]
+Button/colors/font_color = Color(0.1098, 0.1176, 0.1412, 1)
+Button/colors/font_focus_color = Color(0.7529, 0.502, 0.1216, 1)
+Button/colors/font_hover_color = Color(0.7529, 0.502, 0.1216, 1)
+Button/colors/font_pressed_color = Color(0.7529, 0.502, 0.1216, 1)
+Button/fonts/font = ExtResource("4")
+Button/font_sizes/font_size = 34
+Button/styles/focus = SubResource("estilo_resaltado")
+Button/styles/hover = SubResource("estilo_resaltado")
+Button/styles/normal = SubResource("estilo_normal")
+Button/styles/pressed = SubResource("estilo_resaltado")
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+
+[node name="Fondo" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.9686, 0.9647, 0.9529, 1)
+
+[node name="Centro" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -450.0
+offset_top = -390.0
+offset_right = 450.0
+offset_bottom = 390.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="Motivo" type="Control" parent="Centro"]
+custom_minimum_size = Vector2(900, 120)
+layout_mode = 2
+mouse_filter = 2
+script = ExtResource("2")
+
+[node name="Titulo" type="Label" parent="Centro"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.1098, 0.1176, 0.1412, 1)
+theme_override_fonts/font = SubResource("font_titulo")
+theme_override_font_sizes/font_size = 78
+text = "EDGE CASE"
+horizontal_alignment = 1
+
+[node name="TaglineWrap" type="CenterContainer" parent="Centro"]
+layout_mode = 2
+theme_override_constants/margin_top = 6
+
+[node name="Tagline" type="Label" parent="Centro/TaglineWrap"]
+custom_minimum_size = Vector2(640, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4314, 0.4275, 0.4039, 1)
+theme_override_fonts/font = ExtResource("5")
+theme_override_font_sizes/font_size = 28
+text = "¿Qué pasa cuando la verdad depende de quién la mira?"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="DivisorWrap" type="CenterContainer" parent="Centro"]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+
+[node name="Divisor" type="ColorRect" parent="Centro/DivisorWrap"]
+custom_minimum_size = Vector2(92, 1)
+layout_mode = 2
+color = Color(0.8471, 0.8392, 0.8157, 1)
+
+[node name="OpcionesWrap" type="CenterContainer" parent="Centro"]
+layout_mode = 2
+
+[node name="Opciones" type="VBoxContainer" parent="Centro/OpcionesWrap"]
+layout_mode = 2
+theme = SubResource("tema_opciones")
+theme_override_constants/separation = 16
+
+[node name="NuevaPartida" type="Button" parent="Centro/OpcionesWrap/Opciones"]
+layout_mode = 2
+text = "Nueva partida"
+alignment = 0
+
+[node name="Continuar" type="Button" parent="Centro/OpcionesWrap/Opciones"]
+layout_mode = 2
+text = "Continuar"
+alignment = 0
+
+[node name="Escenas" type="Button" parent="Centro/OpcionesWrap/Opciones"]
+layout_mode = 2
+text = "Escenas"
+alignment = 0
+
+[node name="Opciones" type="Button" parent="Centro/OpcionesWrap/Opciones"]
+layout_mode = 2
+text = "Opciones"
+alignment = 0
+
+[node name="Salir" type="Button" parent="Centro/OpcionesWrap/Opciones"]
+layout_mode = 2
+text = "Salir"
+alignment = 0
+
+[node name="EspacioFinal" type="Control" parent="Centro"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="Footer" type="Label" parent="Centro"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.722, 0.714, 0.69, 1)
+theme_override_fonts/font = ExtResource("4")
+theme_override_font_sizes/font_size = 15
+text = "PROTOTIPO · V0.1"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="Centro/OpcionesWrap/Opciones/NuevaPartida" to="." method="_on_nueva_partida_pressed"]
+[connection signal="pressed" from="Centro/OpcionesWrap/Opciones/Continuar" to="." method="_on_continuar_pressed"]
+[connection signal="pressed" from="Centro/OpcionesWrap/Opciones/Escenas" to="." method="_on_escenas_pressed"]
+[connection signal="pressed" from="Centro/OpcionesWrap/Opciones/Opciones" to="." method="_on_opciones_pressed"]
+[connection signal="pressed" from="Centro/OpcionesWrap/Opciones/Salir" to="." method="_on_salir_pressed"]
