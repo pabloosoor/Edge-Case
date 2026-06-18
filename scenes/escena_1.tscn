@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/escena_1.gd" id="1"]
+
+[node name="Escena1" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+
+[node name="FondoLaboratorio" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0784, 0.0863, 0.1098, 1)
+metadata/_edit_lock_ = true
+
+[node name="NotaPlaceholder" type="Label" parent="FondoLaboratorio"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -400.0
+offset_top = 40.0
+offset_right = 400.0
+offset_bottom = 90.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.27, 0.29, 0.34, 1)
+theme_override_font_sizes/font_size = 22
+text = "LABORATORIO - fondo provisional"
+horizontal_alignment = 1
