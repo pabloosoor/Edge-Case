@@ -1,16 +1,15 @@
-[gd_resource type="Resource" script_class="DialogicCharacter" load_steps=2 format=3]
-
-[ext_resource type="Script" uid="uid://don4ds5f38byo" path="res://addons/dialogic/Resources/character.gd" id="1"]
-
-[resource]
-script = ExtResource("1")
-display_name = "Allegado"
-nicknames = []
-color = Color(0.6902, 0.3529, 0.2235, 1)
-description = ""
-scale = 1.0
-offset = Vector2(0, 0)
-mirror = false
-default_portrait = ""
-portraits = {}
-custom_info = {}
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+&"_translation_id": "",
+&"color": Color(0.6902, 0.3529, 0.2235, 1),
+&"custom_info": {},
+&"default_portrait": "",
+&"description": "",
+&"display_name": "Allegado",
+&"mirror": false,
+&"nicknames": [],
+&"offset": Vector2(0, 0),
+&"portraits": {},
+&"scale": 1.0
+}
