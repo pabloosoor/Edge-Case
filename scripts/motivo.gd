@@ -1,14 +1,14 @@
 extends Control
-## Dibuja el motivo del título: tres líneas finas que convergen en un punto,
-## cada una con el color de un protagonista.
 
+# las tres lineas del logo, cada color es un protagonista
 const AZUL := Color("3e5c7e")    # detective
-const AMBAR := Color("c0801f")   # sintético
+const AMBAR := Color("c0801f")   # sintetico
 const ARCILLA := Color("b05a39") # allegado
-const TINTA := Color("1c1e24")   # punto de convergencia
+const TINTA := Color("1c1e24")
 
 
-func _draw() -> void:
+func _draw():
+	# punto donde se juntan las tres lineas
 	var vertice := Vector2(size.x * 0.5, size.y - 6.0)
 	var separacion := 92.0
 	var alto := 92.0
@@ -22,6 +22,7 @@ func _draw() -> void:
 	draw_line(vertice, fin_centro, AMBAR, grosor, true)
 	draw_line(vertice, fin_der, ARCILLA, grosor, true)
 
+	# puntitos de las puntas
 	var radio := 5.0
 	draw_circle(fin_izq, radio, AZUL)
 	draw_circle(fin_centro, radio, AMBAR)
