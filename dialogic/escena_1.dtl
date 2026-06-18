@@ -1,0 +1,14 @@
+# ESCENA 1 - Laboratorio de la victima (escena del crimen)
+# TODO: todo el dialogo de abajo es PLACEHOLDER, el autor lo reescribira.
+Detective: (PLACEHOLDER) La puerta del laboratorio estaba abierta. Nadie fuerza una cerradura para entrar a un lugar vacio.
+Detective: (PLACEHOLDER) El aire huele a ozono y a algo mas viejo. Sangre, quiza. Todavia no lo se.
+Detective: (PLACEHOLDER) La victima trabajaba con sinteticos. De los que aprenden demasiado rapido.
+Detective: (PLACEHOLDER) Una consola sigue encendida en el rincon. Bajo la luz fria, un cuerpo.
+Detective: (PLACEHOLDER) Tengo que decidir por donde empiezo.
+- Acercarme al cuerpo
+	[signal arg="sospecha_arriba"]
+	Detective: (PLACEHOLDER) Me agacho. Las heridas no encajan con un accidente. Alguien estuvo aca.
+- Revisar la consola primero
+	[signal arg="confianza_arriba"]
+	Detective: (PLACEHOLDER) Los registros siguen abiertos. Quien se fue tenia prisa, no costumbre de borrar huellas.
+Detective: (PLACEHOLDER) Sea como sea, esto recien empieza. Hora de trabajar.

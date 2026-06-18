@@ -30,9 +30,9 @@ GameState="*res://scripts/game_state.gd"
 [dialogic]
 
 directories/dch_directory={
-"allegado": "res://dialogic/allegado.dch",
-"detective": "res://dialogic/detective.dch",
-"sintetico": "res://dialogic/sintetico.dch"
+"Allegado": "res://dialogic/allegado.dch",
+"Detective": "res://dialogic/detective.dch",
+"Sintetico": "res://dialogic/sintetico.dch"
 }
 directories/dtl_directory={
 "escena_1": "res://dialogic/escena_1.dtl"
